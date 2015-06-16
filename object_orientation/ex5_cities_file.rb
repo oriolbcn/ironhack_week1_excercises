@@ -1,3 +1,5 @@
+# The names of the cities should be stored in a file instead of an array
+
 class Car
   
   def initialize(noise)

@@ -1,3 +1,6 @@
+# A car needs to hold the names of the cities it visits. 
+# A car should have a method cities that returns the array of names.
+
 class Car
   
   def initialize(noise)

@@ -1,3 +1,5 @@
+# Create an array that has 3 objects of the type Car. Call make noise on all of them
+
 class Car
   def initialize(sound)
     @sound = sound

@@ -1,3 +1,6 @@
+# We have an array of strings representing different sounds.
+# Create an array of cars each of one making the noise in the string.
+
 class Car
   def initialize(sound)
     @sound = sound

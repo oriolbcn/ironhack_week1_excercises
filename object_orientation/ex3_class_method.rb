@@ -1,3 +1,5 @@
+# Create a class method in Car. That method should receive a car and makes its noise twice.
+
 class Car
   def initialize(noise)
     @noise = noise

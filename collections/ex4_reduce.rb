@@ -1,3 +1,5 @@
+# We have a list of cars and we want a single string with all the sound names concatenated
+
 class Car
   attr_reader :sound
   

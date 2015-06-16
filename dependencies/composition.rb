@@ -1,3 +1,8 @@
+# Create Car and Engine classes.
+# Both of them make their own noises.
+# When Car makes noise the output is the noise of the Car plus the noise of the engine.
+# Create different types of engines that should work with any car.
+
 class Car
   def initialize(engine)
     @engine = engine

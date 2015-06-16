@@ -1,3 +1,8 @@
+# Create a class Person that has 2 attributes. Name and age. 
+# The name of the person must be a read only attribute.
+#
+# Both attributes must be set on construction
+
 class Person
   
   attr_reader :name

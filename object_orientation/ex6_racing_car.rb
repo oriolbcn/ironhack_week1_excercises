@@ -1,3 +1,5 @@
+# Extend  car class with a racing car class whose noise will always be “BROOOM” no matter what
+
 class Car
   def initialize(noise)
     @noise = noise
