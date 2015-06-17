@@ -40,3 +40,22 @@ fred = Employee.new('Fred', 'Crane Operator', 30000)
 fred.add_observer payroll
 fred.add_observer hhrr_dept
 fred.salary = 35000
+
+
+
+# -----
+
+
+def Employee
+  def salary
+    @salary
+  end
+  
+  def salary=(new_salary)
+    @salary = salary
+  end
+end
+
+fred = Employee.new
+fred.salary
+fred.salary = 2000
