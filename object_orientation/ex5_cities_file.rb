@@ -1,14 +1,15 @@
 # The names of the cities should be stored in a file instead of an array
 
 class Car
+   
+  attr_accessor :noise
   
   def initialize(noise)
     @noise = noise
-    @cities = []
   end
 
   def make_noise
-    puts @noise
+    puts noise
   end
   
   def visit_city(city)
@@ -26,8 +27,16 @@ class Car
     car.make_noise
   end
 end
+class RacingCar < Car
+  
+  def initialize
+    @noise = "BROOOOOM"
+  end
+end
 
-car = Car.new("Brooom!")
-car.visit_city("Barcelona")
-car.visit_city("Madrid")
-puts car.cities
+racing_car = RacingCar.new
+racing_car.make_noise
+
+car = Car.new
+car.noise
+car.noise = "Broooom"
