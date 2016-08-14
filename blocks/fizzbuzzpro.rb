@@ -1,8 +1,7 @@
 class FizzBuzz
   
-  def initialize(conditions, lambda)
+  def initialize(conditions)
     @conditions = conditions
-    @lambda = lambda
   end
   
   def run
@@ -14,8 +13,8 @@ class FizzBuzz
   def print_number(number)
     result = ""
 
-    @conditions.each do |condition, string|
-      condition_result = @lambda.call(number, condition, string)
+    @conditions.each do |condition|
+      condition_result = condition.call(number)
       if condition_result
         result += condition_result
       end
@@ -29,16 +28,22 @@ class FizzBuzz
   end
 end
 
-lambda = ->(i, condition, string) do
-  if i % condition == 0
-    return string
+fizz = lambda do |i| 
+  if i % 3 == 0
+    return "fizz"
   end
 end
 
-conditions = {
-  3 => "Fizz",
-  5 => "Buzz",
-  7 => "Paff"
-}
+buzz = lambda do |i| 
+  if i % 5 == 0
+    return "buzz"
+  end
+end
 
-FizzBuzz.new(conditions, lambda).run
+paff = lambda do |i|
+  if i % 10 == 0
+    return "paff"
+  end
+end
+
+FizzBuzz.new([fizz, buzz, paff]).run

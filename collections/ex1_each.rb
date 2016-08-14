@@ -1,21 +1,7 @@
-# Create an array that has 3 objects of the type Car. Call make noise on all of them
+# Create an array that has the names of 3 of your classmates. Use what you just learned to tell them good morning
 
-class Car
-  def initialize(sound)
-    @sound = sound
-  end
-  
-  def make_noise
-    puts @sound
-  end
-end
+classmates = ["Jack", "Wally", "Joey"]
 
-normal_car = Car.new("Broooom")
-noisy_car = Car.new("BROOOOOOM")
-quiet_car = Car.new("brrom")
-
-car_collection = [normal_car, noisy_car, quiet_car]
-
-car_collection.each do |car|
-  car.make_noise
+classmates.each do |student|
+  puts "Good morning, #{student}"
 end

@@ -16,17 +16,13 @@ class Car
     @cities << city
   end
   
-  def print_cities
-    puts @cities
-  end
-  
-  def self.make_noise_twice(car)
-    car.make_noise
-    car.make_noise
+  def cities
+    @cities
   end
 end
 
 car = Car.new("Brooom!")
 car.visit_city("Barcelona")
 car.visit_city("Madrid")
-car.print_cities
+car.visit_city("Miami")
+puts car.cities

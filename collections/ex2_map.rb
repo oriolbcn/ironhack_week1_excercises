@@ -1,23 +1,7 @@
-# We have an array of strings representing different sounds.
-# Create an array of cars each of one making the noise in the string.
+# Given an Array with city names all in downcase, return another with those city names properly capitalized
 
-class Car
-  def initialize(sound)
-    @sound = sound
-  end
-  
-  def make_noise
-    puts @sound
-  end
-end
+cities = ["miami", "madrid", "barcelona"]
 
+pretty_cities = cities.map { |city| city.capitalize }
 
-sounds = ["Brooom", "Meek", "Nyan"]
-
-cars = sounds.map do |sound|
-  Car.new(sound)
-end
-
-cars.each do |car|
-  car.make_noise
-end
+puts pretty_cities

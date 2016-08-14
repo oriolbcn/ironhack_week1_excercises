@@ -36,12 +36,12 @@ class Truck
 end
 
 class WheelsCounter
-  def initialize(cars)
-    @cars = cars
+  def initialize(vehicles)
+    @vehicles = vehicles
   end
   
   def count_wheels
-    @cars.reduce(0) do |sum, vehicle|
+    @vehicles.reduce(0) do |sum, vehicle|
       sum + vehicle.number_of_wheels
     end
   end

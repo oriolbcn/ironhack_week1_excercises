@@ -1,8 +1,6 @@
 # The names of the cities should be stored in a file instead of an array
 
 class Car
-   
-  attr_accessor :noise
   
   def initialize(noise)
     @noise = noise
@@ -13,7 +11,7 @@ class Car
   end
   
   def visit_city(city)
-    cities = IO.readlines("cities.txt")
+    cities = IO.readlines("cities.txt").map { |line| line.chomp }
     cities << city
     IO.write("cities.txt", cities.join("\n"))
   end
@@ -21,22 +19,10 @@ class Car
   def cities
     IO.readlines("cities.txt")
   end
-  
-  def self.make_noise_twice(car)
-    car.make_noise
-    car.make_noise
-  end
-end
-class RacingCar < Car
-  
-  def initialize
-    @noise = "BROOOOOM"
-  end
 end
 
-racing_car = RacingCar.new
-racing_car.make_noise
-
-car = Car.new
-car.noise
-car.noise = "Broooom"
+car = Car.new("Broooom!")
+car.visit_city("Barcelona")
+car.visit_city("Madrid")
+car.visit_city("Miami")
+puts car.cities
